@@ -1,0 +1,13 @@
+
+en:
+  hello: "Hello world"
+
+  activerecord:
+    errors:
+      messages:
+        after: can't be less then start time
+        on_or_after: must be in future
+        before: must be before end time
+        available_reservation: Is reserved
+
+

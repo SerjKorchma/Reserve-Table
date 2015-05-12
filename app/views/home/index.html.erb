@@ -1,0 +1,32 @@
+<!-- Start Logo Section -->
+<section id="logo-section" class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="logo text-center">
+          <h1>Reserve Tables</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Logo Section -->
+
+
+<!-- Start Main Body Section -->
+<div class="mainbody-section text-center">
+  <div class="container">
+    <div class="row">
+
+      <%= render 'reservations/index' %>
+
+    </div>
+  </div>
+</div>
+<!-- End Main Body Section -->
+
+<!--Start Modal Template-->
+<script type="text/ng-template" id="CreateReservation.html">
+  <%= render 'reservations/create' %>
+</script>
+<!--End Modal Template-->

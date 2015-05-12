@@ -1,0 +1,30 @@
+<div ng-controller="ReservationListCtrl as vm">
+
+  <div class="col-sm-3" ng-repeat="table in vm.tables">
+    <div class="menu-item " ng-class="vm.getItemClass(table)">
+      <a ng-click="vm.openCreateModal(table)" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+        <div ng-hide="hover">
+          <i class="fa fa-table"></i>
+
+          <p>Table №{{table}}</p>
+        </div>
+
+        <div ng-if="hover">
+          <div ng-show="!vm.checkReserved(table)">
+            <b>No reserves</b>
+          </div>
+          <div ng-show="vm.checkReserved(table)" class="reservation-list">
+            <b>Reserved time</b>
+            <ul>
+              <li ng-repeat="reservation in vm.getTableReservations(table) | orderBy:'start_time'">
+                {{ reservation.start_time | date:'d MMMM'}} from
+                {{ reservation.start_time | date:'HH:mm' }} to
+                {{ reservation.end_time | date:'HH:mm'}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

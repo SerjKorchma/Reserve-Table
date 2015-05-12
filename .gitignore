@@ -1,0 +1,24 @@
+
+# Ignore bundler config.
+/.bundle
+/vendor/bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+
+#documentation
+/.yardoc/
+/doc/
+/rdoc/
+
+#test
+/spec/reports/
+/test/tmp/
+
+/.idea

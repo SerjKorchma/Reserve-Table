@@ -1,0 +1,11 @@
+/*
+ *
+ *= require_self
+ *= require font-awesome
+ *= require bootstrap-datepicker3
+ *= require bootstrap-timepicker
+ *= require_tree .
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
